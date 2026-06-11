@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashion Analytics | Painel de Moda e Retalho</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="d3.v7.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">FA</div>
+        <div>
+          <p class="eyebrow">Fashion Analytics</p>
+          <h1>Painel de Moda e Retalho</h1>
+        </div>
+      </div>
+
+      <div class="sidebar-heading">
+        <h2>Métricas para explorar</h2>
+        <p>Arraste uma métrica para compor a análise.</p>
+      </div>
+
+      <div id="kpiList" class="kpi-list" aria-label="Lista de KPIs arrastáveis"></div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Informação Geográfica e Visualização</p>
+          <h2>Moda, escolhas e satisfação</h2>
+          <p class="intro-text">Uma leitura visual sobre preferências, interações e compras no dataset local.</p>
+        </div>
+
+        <div class="actions">
+          <span id="statusText" class="status-text" aria-live="polite"></span>
+          <button id="saveBtn" class="action-button primary" type="button">GUARDAR</button>
+          <button id="refreshBtn" class="action-button" type="button">ATUALIZAR</button>
+        </div>
+      </header>
+
+      <section id="summaryStrip" class="summary-strip" aria-label="Resumo geral do dataset"></section>
+
+      <section id="dashboard" class="dashboard-grid" aria-label="Área do dashboard"></section>
+    </main>
+  </div>
+
+  <div id="tooltip" class="tooltip" role="tooltip"></div>
+</body>
+</html>
